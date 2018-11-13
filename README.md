@@ -21,7 +21,7 @@ Our code is based on the same data initialization in [QaRS](https://forge.lias-l
 
 This project depends on several libraries from the [Boost project](https://www.boost.org/). To install the required dependencies on a Debian system, run
 
-sudo apt-get install libboost-program-options-dev libboost-log-develop
+`sudo apt-get install libboost-program-options-dev libboost-log-develop`
 
 It also uses the [moodycamel::ConcurrentQueue](https://github.com/cameron314/concurrentqueue) library, which is included here under the terms of the author's "Simplified BSD license".
 
