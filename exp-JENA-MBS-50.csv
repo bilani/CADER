@@ -1,6 +1,6 @@
-Q1	valTemps 396,0	valTempsMFS 0,0	totalTemps 396,0	Time MFS 377,0	Time XSS 19,0	nbRequête: Relaxées 6	| MFS 2	XSS 2	total nb req 8
-Q2	valTemps 151,0	valTempsMFS 0,0	totalTemps 151,0	Time MFS 146,0	Time XSS 5,0	nbRequête: Relaxées 12	| MFS 4	XSS 2	total nb req 16
-Q3	valTemps 207,0	valTempsMFS 0,0	totalTemps 207,0	Time MFS 200,0	Time XSS 7,0	nbRequête: Relaxées 32	| MFS 8	XSS 2	total nb req 40
-Q4	valTemps 326,0	valTempsMFS 0,0	totalTemps 326,0	Time MFS 323,0	Time XSS 3,0	nbRequête: Relaxées 58	| MFS 9	XSS 3	total nb req 67
-Q5	valTemps 1193,0	valTempsMFS 0,0	totalTemps 1193,0	Time MFS 1189,0	Time XSS 4,0	nbRequête: Relaxées 110	| MFS 11	XSS 3	total nb req 121
-Q6	valTemps 2087,0	valTempsMFS 0,0	totalTemps 2087,0	Time MFS 2084,0	Time XSS 3,0	nbRequête: Relaxées 124	| MFS 17	XSS 3	total nb req 141
+Q1	valTemps 472,0	valTempsMFS 0,0	totalTemps 472,0	Time MFS 438,0	Time XSS 34,0	nbRequête: Relaxées 6	| MFS 2	XSS 2	total nb req 8
+Q2	valTemps 215,0	valTempsMFS 0,0	totalTemps 215,0	Time MFS 207,0	Time XSS 8,0	nbRequête: Relaxées 12	| MFS 4	XSS 2	total nb req 16
+Q3	valTemps 262,0	valTempsMFS 0,0	totalTemps 262,0	Time MFS 252,0	Time XSS 10,0	nbRequête: Relaxées 32	| MFS 8	XSS 2	total nb req 40
+Q4	valTemps 409,0	valTempsMFS 0,0	totalTemps 409,0	Time MFS 399,0	Time XSS 10,0	nbRequête: Relaxées 58	| MFS 9	XSS 3	total nb req 67
+Q5	valTemps 891,0	valTempsMFS 0,0	totalTemps 891,0	Time MFS 887,0	Time XSS 4,0	nbRequête: Relaxées 110	| MFS 11	XSS 3	total nb req 121
+Q6	valTemps 2571,0	valTempsMFS 0,0	totalTemps 2571,0	Time MFS 2569,0	Time XSS 2,0	nbRequête: Relaxées 124	| MFS 17	XSS 3	total nb req 141

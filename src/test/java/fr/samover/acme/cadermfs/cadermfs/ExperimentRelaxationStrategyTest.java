@@ -25,23 +25,13 @@ public class ExperimentRelaxationStrategyTest extends AbstractCADERMfsSCoreTest 
     private static final int ALGO_FMBS = 4;
     
     private static final String PLAT_JENA = "JENA";
-    private static final String PLAT_VIRTUOSO = "VIRTUOSO";
-
     /*************************
      * Jena
      *************************/
     
     @Test
     public void testJenaTop50() throws Exception {
-//	testJenaSimpleBFSTop50();
 	testJenaSimpleMBSTop50();
-//	testJenaSimpleOMBSTop50();
-//	testJenaSimpleFMBSTop50();
-    }
-    
-    public void testJenaSimpleBFSTop50() throws Exception {
-	factory = new JenaQueryOptFactory();
-	testSimpleAlgo(ALGO_BFS, 50, PLAT_JENA);
     }
     
     public void testJenaSimpleMBSTop50() throws Exception {
@@ -49,25 +39,6 @@ public class ExperimentRelaxationStrategyTest extends AbstractCADERMfsSCoreTest 
 //  factory = new JenaQueryMBANQFactory();
 	testSimpleAlgo(ALGO_MBS, 50, PLAT_JENA);
     }
-    
-    public void testJenaSimpleOMBSTop50() throws Exception {
-	factory = new JenaQueryOptFactory();
-	testSimpleAlgo(ALGO_OMBS, 50, PLAT_JENA);
-    }
-    
-    public void testJenaSimpleFMBSTop50() throws Exception {
-	factory = new JenaQueryOptFactory();
-	testSimpleAlgo(ALGO_FMBS, 50, PLAT_JENA);
-    }
-    
-    /*************************
-     * Virtuoso
-     *************************/
-    
-    
-    /*************************
-     * Aux Method
-     *************************/
 
     private float executeAlgo(Query q, int typeAlgo, int k) throws Exception {
 	long begin = 0;
