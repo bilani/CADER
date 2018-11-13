@@ -1,35 +1,29 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+**Complete Approach for RDF QuEry Relaxation - CADER**
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+The implementation for CADER a new efficient complete technique for determining optimal relaxations over RDF databases in an efficient way. Our method is based on  the strong  duality  between  MFSes (Minimal Failing Subqueries) and XSSes (maXimal Succeeding Subqueries).  This duality is shown to be the cornerstone of the efficiency of our approach. CADER identifies the root causes of failure and computes relaxations when the user query fails. We propose to evaluate the subqueries of the user query individually in a preprocessing step and base the subsequent computation of relaxations on these intermediate results.
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
-
----
-
-## Edit a file
-
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
-
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+In a nutshell, our method can be summarized in the following steps:
+First, we calculate all minimal failing subsets of the user query before computing the entire set of relaxed queries.
+Then, we compute the hitting sets of these MFSes. These hitting sets are in fact the complement of all the possible relaxations of the failing user query. for each minimal failing subset, we take its complement and  Accordingly, the complete set of relaxed queries is computed from the set of hitting sets in a direct way by taking the complement of each hitting set (i.e. all the triple patterns in the original query not in the hitting set).
 
 ---
 
-## Create a file
+## Data Initialization instructions
+Our code is based on the same data initialization in [QaRS](https://forge.lias-lab.fr/projects/qars/wiki/Documentation).
+1. Copy one of the LUBM data set files existing under resources.OWL into the specified directory of params[0] in QARSInitializationSample.class.
+2. run **QARSInitializationSample** class.
+3. data will be generated in the specified directory of params[3].
+4. update **jenatdb.repository** in triplestores.config with the generated data directory
 
-Next, you’ll add a new file to this repository.
+---
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
+## Installing Additional Libraries
 
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+This project depends on several libraries from the [Boost project](https://www.boost.org/). To install the required dependencies on a Debian system, run
+
+sudo apt-get install libboost-program-options-dev libboost-log-develop
+
+It also uses the [moodycamel::ConcurrentQueue](https://github.com/cameron314/concurrentqueue) library, which is included here under the terms of the author's "Simplified BSD license".
 
 ---
 
