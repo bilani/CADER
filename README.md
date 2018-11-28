@@ -28,4 +28,4 @@ It also uses the [moodycamel::ConcurrentQueue](https://github.com/cameron314/con
 
 ## Example
 
-Once you have compiled the software, you can run the existing test cases such as CADERExamples and the results can be seen in the console.
+Once you have compiled the software, you can run the existing test cases such as CADERExamples and the results can be seen in the Console.
