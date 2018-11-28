@@ -1,6 +1,6 @@
 **CADER: Complete Approach for RDF QuEry Relaxation**
 
-This is the implementation of CADER, a new efficient and complete technique for determining optimal relaxations over RDF databases. Our method is based on  the strong  duality  between  MFSes (Minimal Failing Subsets) and XSSes (maXimal Succeeding Subsets).  This duality is shown to be the cornerstone of the efficiency of our approach. CADER identifies the root causes of failure and computes relaxations when the user query fails. We propose to evaluate the subqueries of the user query individually in a preprocessing step and base the subsequent computation of relaxations on these intermediate results.
+This is the implementation of CADER, a new efficient and complete technique for determining optimal relaxations of failing queries over RDF databases. Our method is based on  the strong  duality  between  MFSes (Minimal Failing Subsets) and XSSes (maXimal Succeeding Subsets).  This duality is shown to be the cornerstone of the efficiency of our algorithm. CADER identifies the root causes of failure in a preprocessing step and base the subsequent computation of relaxations on these intermediate results.
 
 In a nutshell, our method can be summarized in the following steps:
 First, we calculate all minimal failing subsets of the user query before computing the entire set of relaxed queries.
