@@ -26,6 +26,6 @@ It also uses the [moodycamel::ConcurrentQueue](https://github.com/cameron314/con
 
 ---
 
-## Run of test cases
+## Example
 
-Once you have compiled the software, you can run the existing test cases. First, you need an input file containing the test RDF queries, then you update FILE_QUERIES in ExperimentRelaxationStrategyTest with the path of this file and run the class.
+Once you have compiled the software, you can run the existing test cases such as CADERExamples.
