@@ -9,11 +9,10 @@ Then, we compute the hitting sets of these MFSes. These hitting sets are in fact
 ---
 
 ## Data Initialization instructions
-Our code is based on the data initialization step in [QaRS](https://forge.lias-lab.fr/projects/qars/wiki/Documentation), described as follow:
-1. Copy one of the LUBM data set files existing under resources.OWL into the specified directory of params[0] in QARSInitializationSample.class.
-2. run **QARSInitializationSample** class.
-3. data will be generated in the specified directory of params[3].
-4. update **jenatdb.repository** in triplestores.config with the generated data directory
+Our code is based on the data initialization step in [QaRS](https://forge.lias-lab.fr/projects/qars/wiki/Documentation), described as follows:
+1. put the dataset file (i.e. data_file.owl) in the specified directory of params[0] in QARSInitializationSample.class
+2. run **QARSInitializationSample** class, to generate the data in the specified directory of params[3]
+4. update the **jenatdb.repository** in triplestores.config with the generated data directory
 
 ---
 
