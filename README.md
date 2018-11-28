@@ -8,7 +8,7 @@ Then, we compute the hitting sets of these MFSes. These hitting sets are in fact
 
 ---
 
-## Data Initialization instructions
+## Data initialization instructions
 Our code is based on the data initialization step in [QaRS](https://forge.lias-lab.fr/projects/qars/wiki/Documentation), described as follows:
 1. put the dataset file (i.e. data_file.owl) in the specified directory of params[0] in QARSInitializationSample.class
 2. run **QARSInitializationSample** class, to generate the data in the specified directory of params[3]
@@ -16,9 +16,9 @@ Our code is based on the data initialization step in [QaRS](https://forge.lias-l
 
 ---
 
-## Installing Additional Libraries
+## Installation of additional libraries
 
-This project depends on several libraries from the [Boost project](https://www.boost.org/). To install the required dependencies on a Debian system, run
+This project depends on several libraries from the [Boost project](https://www.boost.org/). To install the required dependencies on a Debian system, run the following command:
 
 `sudo apt-get install libboost-program-options-dev libboost-log-develop`
 
