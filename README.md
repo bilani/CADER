@@ -9,7 +9,7 @@ Then, we compute the hitting sets of these MFSes. These hitting sets are in fact
 ---
 
 ## Data Initialization instructions
-Our code is based on the same data initialization in [QaRS](https://forge.lias-lab.fr/projects/qars/wiki/Documentation).
+Our code is based on the data initialization step in [QaRS](https://forge.lias-lab.fr/projects/qars/wiki/Documentation), described as follow:
 1. Copy one of the LUBM data set files existing under resources.OWL into the specified directory of params[0] in QARSInitializationSample.class.
 2. run **QARSInitializationSample** class.
 3. data will be generated in the specified directory of params[3].
