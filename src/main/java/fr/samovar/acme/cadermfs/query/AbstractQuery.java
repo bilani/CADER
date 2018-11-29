@@ -1,6 +1,8 @@
 package fr.samovar.acme.cadermfs.query;
 
+import java.util.AbstractCollection;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -430,7 +432,7 @@ public abstract class AbstractQuery implements Query {
 
 				if (qTemp.getNbTriplePatterns() == 0)
 					continue;
-				if (!allXS.contains(qTemp) && !localMFSList.contains(qTemp)) {
+				if (!allXS.contains(qTemp)) {
 					// System.out.println(qTemp);
 					nbOfExecutedQueries++;
 					if (((AbstractQuery) qTemp).testQuery(session, typeMEL)) {
@@ -440,13 +442,14 @@ public abstract class AbstractQuery implements Query {
 							System.out.println("MFS " + qTemp);
 							List<TriplePattern> coXSS = qTemp.getTriplePatterns();
 							coXSSes.add(coXSS);
-							List<Set<TriplePattern>> solution = generateAllUpperQueries(qTemp);
-							for (Set<TriplePattern> tripletSet : solution) {
-								List<TriplePattern> list = new ArrayList<>();
-								list.addAll(tripletSet);
-								Query q = factory.createQuery(computeRDFQuery(list));
-								localMFSList.add(q);
-							}
+							localMFSList.add(qTemp);
+//							List<Set<TriplePattern>> solution = generateAllUpperQueries(qTemp);
+//							for (Set<TriplePattern> tripletSet : solution) {
+//								List<TriplePattern> list = new ArrayList<>();
+//								list.addAll(tripletSet);
+//								Query q = factory.createQuery(computeRDFQuery(list));
+//								localMFSList.add(q);
+//							}
 						}
 
 					} else {
@@ -462,7 +465,7 @@ public abstract class AbstractQuery implements Query {
 				qTemp = factory.createQuery(computeRDFQuery(list));
 				if (qTemp.getNbTriplePatterns() == 0)
 					continue;
-				if (!allXS.contains(qTemp) && !localMFSList.contains(qTemp)) {
+				if (!allXS.contains(qTemp)) {
 					// System.out.println(qTemp);
 					nbOfExecutedQueries++;
 					if (((AbstractQuery) qTemp).testQuery(session, typeMEL)) {
@@ -472,13 +475,14 @@ public abstract class AbstractQuery implements Query {
 							System.out.println("MFS " + qTemp);
 							List<TriplePattern> coXSS = qTemp.getTriplePatterns();
 							coXSSes.add(coXSS);
-							List<Set<TriplePattern>> solution = generateAllUpperQueries(qTemp);
-							for (Set<TriplePattern> tripletSet : solution) {
-								List<TriplePattern> tempMFSlist = new ArrayList<>();
-								tempMFSlist.addAll(tripletSet);
-								Query q = factory.createQuery(computeRDFQuery(list));
-								localMFSList.add(q);
-							}
+							localMFSList.add(qTemp);
+//							List<Set<TriplePattern>> solution = generateAllUpperQueries(qTemp);
+//							for (Set<TriplePattern> tripletSet : solution) {
+//								List<TriplePattern> tempMFSlist = new ArrayList<>();
+//								tempMFSlist.addAll(tripletSet);
+//								Query q = factory.createQuery(computeRDFQuery(list));
+//								localMFSList.add(q);
+//							}
 
 						}
 
@@ -496,6 +500,18 @@ public abstract class AbstractQuery implements Query {
 
 	}
 
+	private boolean checkSuperMFS(Query qTemp) {
+		boolean results = true;
+		List<TriplePattern> listTriplePatterns = qTemp.getTriplePatterns();
+		for (Query mfsQuery : localMFSList) {
+			List<TriplePattern> MFSTistTriplePatterns = mfsQuery.getTriplePatterns();
+			if (!Collections.disjoint(listTriplePatterns, MFSTistTriplePatterns)) {
+				results = false;
+			}
+		}
+		return results;
+	}
+	
 	private List<Set<TriplePattern>> generateAllUpperQueries(Query qTemp) {
 
 		List<Set<TriplePattern>> solution = new ArrayList<Set<TriplePattern>>();

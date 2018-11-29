@@ -12,11 +12,11 @@ import fr.samovar.acme.cadermfs.triplestore.jena.JenaQueryOptFactory;
 /**
  * @author Stéphane JEAN
  */
-public class ExperimentRelaxationStrategyTest extends AbstractCADERMfsSCoreTest {
+public class CADERExamples extends AbstractCADERMfsSCoreTest {
     
-    Logger log = Logger.getLogger(ExperimentRelaxationStrategyTest.class);
+    Logger log = Logger.getLogger(CADERExamples.class);
 
-	private static final String FILE_QUERIES = "queries-eswc2016.test";
+	private static final String FILE_QUERIES = "chain.txt";
     private static final int NB_EXEC = 1;
 
     private static final int ALGO_BFS = 1;
